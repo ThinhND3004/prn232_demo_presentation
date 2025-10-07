@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "he5TXMe3puk=",
+  "success": true,
+  "projectFilePath": "/home/kayden/Documents/Thinh_Development/FPT_Learning_Process/FALL2025/PRN232_PhuongLHK/PRN232_Presentation_demo/PRN232_Presentation/PRN232_Presentation_API/PRN232_Presentation_API.csproj",
+  "expectedPackageFiles": [
+    "/home/kayden/.nuget/packages/microsoft.aspnetcore.openapi/9.0.9/microsoft.aspnetcore.openapi.9.0.9.nupkg.sha512",
+    "/home/kayden/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512",
+    "/home/kayden/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.9/microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

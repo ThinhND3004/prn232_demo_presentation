@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/PRN232_Presentation_API.props" />
+</Project>
