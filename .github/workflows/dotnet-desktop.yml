@@ -11,7 +11,6 @@ permissions:
 env:
   SOLUTION_FILE: "PRN232_Presentation.sln"
   PROJECT_FOLDER: "PRN232_Presentation_API"
-  IMAGE_NAME: ghcr.io/${{ toLower(github.repository_owner) }}/prn232-demo
 
 jobs:
   build-and-push:
@@ -29,19 +28,19 @@ jobs:
           dotnet restore "${{ env.SOLUTION_FILE }}"
           dotnet build "${{ env.SOLUTION_FILE }}" --configuration Release --no-restore
 
-      - name: Login to GHCR
+      - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push image
-        uses: docker/build-push-action@v5
-        with:
-          context: ${{ env.PROJECT_FOLDER }}
-          file: ${{ env.PROJECT_FOLDER }}/Dockerfile
-          push: true
-          tags: |
-            ${{ env.IMAGE_NAME }}:latest
-            ${{ env.IMAGE_NAME }}:${{ github.sha }}
+      - name: Build and Push Docker Image
+        run: |
+          REPO_OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          IMAGE_NAME="ghcr.io/${REPO_OWNER}/prn232-demo"
+          echo "Building and pushing image: $IMAGE_NAME"
+
+          docker build -t "$IMAGE_NAME:latest" -t "$IMAGE_NAME:${{ github.sha }}" ${{ env.PROJECT_FOLDER }}
+          docker push "$IMAGE_NAME:latest"
+          docker push "$IMAGE_NAME:${{ github.sha }}"
