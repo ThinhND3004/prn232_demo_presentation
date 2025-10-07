@@ -7,7 +7,8 @@ on:
 env:
   SOLUTION_FILE: "PRN232_Presentation.sln"
   PROJECT_FOLDER: "PRN232_Presentation_API"
-  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/prn232-demo
+  IMAGE_NAME: ghcr.io/${{ github.repository_owner,, }}/prn232-demo
+
 
 permissions:
   contents: read
