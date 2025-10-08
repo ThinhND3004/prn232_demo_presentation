@@ -10,7 +10,7 @@
   <component name="ChangeListManager">
     <list default="true" id="462965d9-500d-4829-99b7-04afb0dc67df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PRN232_Presentation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PRN232_Presentation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PRN232_Presentation_API/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/PRN232_Presentation_API/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PRN232_Presentation_API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PRN232_Presentation_API/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759807468938</updated>
       <workItem from="1759807470158" duration="3610000" />
-      <workItem from="1759898029686" duration="1183000" />
+      <workItem from="1759898029686" duration="2631000" />
     </task>
     <task id="LOCAL-00001" summary="Dockerfile added">
       <option name="closed" value="true" />

@@ -35,7 +35,7 @@ var summaries = new[]
 
 app.MapGet("/api/hello", () =>
     {
-        return "Hello World!";
+        return "Hello Everyone!";
     })
     .WithName("Hello");
 
