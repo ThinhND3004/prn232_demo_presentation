@@ -1,20 +1,17 @@
-name: Build and Push Docker Image
+name: Build and Push to GHCR
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
@@ -25,6 +22,8 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/prn232-api:latest \
-            -f PRN232_Presentation_API/Dockerfile .
-          docker push ghcr.io/${{ github.repository_owner }}/prn232-api:latest
+          REPO_OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          IMAGE_NAME="ghcr.io/${REPO_OWNER}/prn232-api:latest"
+          echo "Building and pushing image: $IMAGE_NAME"
+          docker build -t $IMAGE_NAME -f PRN232_Presentation_API/Dockerfile .
+          docker push $IMAGE_NAME
