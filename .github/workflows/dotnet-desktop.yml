@@ -30,3 +30,7 @@ jobs:
           echo "Building and pushing image: $IMAGE_NAME"
           docker build -t $IMAGE_NAME -f PRN232_Presentation_API/Dockerfile .
           docker push $IMAGE_NAME
+      - name: Trigger Render Deploy
+        run: |
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
+    
