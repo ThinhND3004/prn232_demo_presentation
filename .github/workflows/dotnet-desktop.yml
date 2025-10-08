@@ -8,25 +8,13 @@ permissions:
   contents: read
   packages: write
 
-env:
-  SOLUTION_FILE: "PRN232_Presentation.sln"
-  PROJECT_FOLDER: "PRN232_Presentation_API"
-
 jobs:
-  build-and-push:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '8.0.x'
-
-      - name: Restore & Build
-        run: |
-          dotnet restore "${{ env.SOLUTION_FILE }}"
-          dotnet build "${{ env.SOLUTION_FILE }}" --configuration Release --no-restore
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
@@ -38,9 +26,7 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           REPO_OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
-          IMAGE_NAME="ghcr.io/${REPO_OWNER}/prn232-demo"
+          IMAGE_NAME="ghcr.io/${REPO_OWNER}/prn232-api:latest"
           echo "Building and pushing image: $IMAGE_NAME"
-
-          docker build -t "$IMAGE_NAME:latest" -t "$IMAGE_NAME:${{ github.sha }}" ${{ env.PROJECT_FOLDER }}
-          docker push "$IMAGE_NAME:latest"
-          docker push "$IMAGE_NAME:${{ github.sha }}"
+          docker build -t $IMAGE_NAME -f PRN232_Presentation_API/Dockerfile .
+          docker push $IMAGE_NAME
