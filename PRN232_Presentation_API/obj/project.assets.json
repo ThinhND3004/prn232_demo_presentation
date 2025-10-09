@@ -75,31 +75,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nguye\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/kayden/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FPTU-SE183042\\FPTU-SE183042\\FALL2025\\PRN232\\PRN_Presentation\\prn232_demo_presentation\\PRN232_Presentation_API\\PRN232_Presentation_API.csproj",
+      "projectUniqueName": "/home/kayden/Documents/Thinh_Development/FPT_Learning_Process/FALL2025/PRN232_PhuongLHK/PRN232_Presentation_demo/PRN232_Presentation/PRN232_Presentation_API/PRN232_Presentation_API.csproj",
       "projectName": "PRN232_Presentation_API",
-      "projectPath": "D:\\FPTU-SE183042\\FPTU-SE183042\\FALL2025\\PRN232\\PRN_Presentation\\prn232_demo_presentation\\PRN232_Presentation_API\\PRN232_Presentation_API.csproj",
-      "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-      "outputPath": "D:\\FPTU-SE183042\\FPTU-SE183042\\FALL2025\\PRN232\\PRN_Presentation\\prn232_demo_presentation\\PRN232_Presentation_API\\obj\\",
+      "projectPath": "/home/kayden/Documents/Thinh_Development/FPT_Learning_Process/FALL2025/PRN232_PhuongLHK/PRN232_Presentation_demo/PRN232_Presentation/PRN232_Presentation_API/PRN232_Presentation_API.csproj",
+      "packagesPath": "/home/kayden/.nuget/packages/",
+      "outputPath": "/home/kayden/Documents/Thinh_Development/FPT_Learning_Process/FALL2025/PRN232_PhuongLHK/PRN232_Presentation_demo/PRN232_Presentation/PRN232_Presentation_API/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/kayden/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -118,7 +111,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -140,6 +133,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[9.0.9, 9.0.9]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -148,7 +147,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
