@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PRN232_Presentation_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc3eefa2cf3bd01722b80b155d6619361856bb8f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e220561d6c4dc86ec1ee885081d1c6d98b50c47")]
 [assembly: System.Reflection.AssemblyProductAttribute("PRN232_Presentation_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PRN232_Presentation_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
